@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aashutosh Murai – Python & Data Developer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f6f7fb;--surface:#fff;--ink:#18202f;--mute:#5a6578;--line:#d9deea;--accent:#2a55e5;--sun:#e8a600;--code:#eef1f8;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151f;--surface:#171e2c;--ink:#e8ecf5;--mute:#98a3b8;--line:#2a3347;--accent:#7b9bff;--sun:#f5be2e;--code:#0d121b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10151f;--surface:#171e2c;--ink:#e8ecf5;--mute:#98a3b8;--line:#2a3347;--accent:#7b9bff;--sun:#f5be2e;--code:#0d121b;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:20px 0;border-bottom:1px solid var(--line);font-size:15px}
+nav a{color:var(--mute);text-decoration:none}
+nav a:hover{color:var(--ink)}
+nav .name{color:var(--ink);font-weight:600;margin-right:auto}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 10px;font:inherit;font-size:14px;cursor:pointer}
+header{padding:56px 0 40px}
+h1{font-size:clamp(2.4rem,7vw,4rem);line-height:1.05;margin:0 0 18px;font-weight:600;letter-spacing:-.025em}
+.lead{font-size:1.15rem;color:var(--mute);max-width:60ch;margin:0 0 28px}
+.cell{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;margin:0 0 14px;overflow:hidden}
+.cell .in{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:16px}
+.cell .tag{color:var(--accent);font-size:13px;padding-top:3px;white-space:nowrap}
+.cell pre{margin:0;overflow-x:auto;font-size:14.5px;line-height:1.65;background:var(--code);padding:12px 14px;border-radius:4px}
+.cell .out{border-top:1px dashed var(--line);padding:12px 16px 14px 16px;display:grid;grid-template-columns:auto 1fr;gap:14px;font-size:14.5px}
+.cell .out .tag{color:var(--sun)}
+.k{color:var(--accent)}.s{color:#1e8a5a}.c{color:var(--mute)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .s{color:#6fd3a2}}
+:root[data-theme="dark"] .s{color:#6fd3a2}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:1.7rem;margin:0 0 22px;letter-spacing:-.015em;font-weight:600}
+h3{font-size:1.1rem;margin:0;font-weight:600}
+.row{margin-bottom:26px}
+.meta{color:var(--mute);font-size:14.5px}
+.row ul,.proj ul{margin:8px 0 0;padding-left:20px}
+.row li,.proj li{margin-bottom:5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px}
+.proj .stack{font-size:13px;color:var(--accent);margin:4px 0 6px}
+.skills dt{font-weight:600;margin-top:16px}
+.skills dd{margin:3px 0 0;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips span{font-size:13.5px;padding:3px 10px;border:1px solid var(--line);border-radius:99px;background:var(--surface)}
+footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+@media (max-width:520px){.cell .in,.cell .out{grid-template-columns:1fr;gap:6px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<span class="name">Aashutosh Murai</span>
+<a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+<button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+</nav>
+
+<header>
+<h1>I build Python tools that turn data into answers.</h1>
+<p class="lead">MCA graduate from Yavatmal, Maharashtra. I make AI-driven automation agents, NLP chatbots and full-stack web apps with Python, Django and JavaScript.</p>
+<div class="cell" aria-label="Profile as Python code">
+<div class="in"><span class="tag mono">In [1]:</span>
+<pre class="mono"><span class="k">me</span> = {
+  <span class="s">"role"</span>: <span class="s">"Python Data Analyst"</span>,
+  <span class="s">"focus"</span>: [<span class="s">"NLP"</span>, <span class="s">"Automation"</span>, <span class="s">"Web apps"</span>],
+  <span class="s">"location"</span>: <span class="s">"Yavatmal, India"</span>
+}</pre></div>
+<div class="out mono"><span class="tag">Out[1]:</span><span>Open to Python, data and AI roles</span></div>
+</div>
+<div class="btns">
+<a class="btn main" href="#projects">See my projects</a>
+<a class="btn" href="mailto:ashutoshmurai0@gmail.com">Email me</a>
+</div>
+</header>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<article class="proj"><h3>Solar Plant Q&amp;A Chatbot</h3><p class="stack mono">Python (OOP), NLP, REST APIs</p>
+<ul><li>Conversational AI that answers solar plant operation questions.</li><li>Preprocessing, tokenization and intent classification mapped to a knowledge base.</li><li>REST search endpoints with sub-300ms responses.</li></ul></article>
+
+<article class="proj"><h3>WhatsApp AI Message Scheduler</h3><p class="stack mono">Python, Streamlit, PyWhatKit, Multithreading</p>
+<ul><li>Agent that schedules and sends WhatsApp messages with sub-second accuracy.</li><li>Streamlit interface for timing rules, phone lists and templates.</li><li>Multi-threaded queue lifted delivery reliability to 99%.</li></ul></article>
+
+<article class="proj"><h3>Fitness Stats Tracker</h3><p class="stack mono">Python, MySQL, Webhooks</p>
+<ul><li>Gym members log and share daily workouts and nutrition.</li><li>WhatsApp webhooks feed a backend data pipeline.</li><li>Tuned MySQL schemas to prevent table deadlocks.</li></ul></article>
+
+<article class="proj"><h3>Garage Cafe</h3><p class="stack mono">HTML, CSS, JavaScript, MySQL, Jasmine</p>
+<ul><li>Responsive restaurant site with menu browsing, cart and table reservations.</li><li>MVC structure with Fetch API ordering and LocalStorage.</li><li>Jasmine tests for cart totals and rendering.</li></ul></article>
+
+<article class="proj"><h3>Amazon &amp; YouTube Clones</h3><p class="stack mono">JavaScript, Fetch API, Jasmine</p>
+<ul><li>Dynamic DOM rendering with CSS Grid and Flexbox layouts.</li><li>LocalStorage state and async data fetching, covered by unit and integration tests.</li></ul></article>
+
+<article class="proj"><h3>Mini projects</h3><p class="stack mono">JavaScript, Tkinter</p>
+<ul><li>Web: Rock-Paper-Scissors, To-Do list, Calculator.</li><li>Desktop: Text Editor, Snake, Tic-Tac-Toe, Countdown Timer, 2D Animation.</li></ul></article>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="row"><h3>Software Engineer, Contiguvenzaa Pvt Ltd</h3><div class="meta">3 months</div>
+<ul><li>Built full-stack web interfaces in HTML5, CSS3 and ES6+ JavaScript connected to Python backend microservices.</li><li>Made mobile-responsive, accessible UI components; improved page load speed by 22%.</li><li>Organized frontend code with the MVC pattern and ES Modules.</li><li>Ran team Git and GitHub workflow: feature branches, merge conflicts, code reviews.</li></ul></div>
+<div class="row"><h3>ICT Educator, BOMIS</h3><div class="meta">1 month</div>
+<ul><li>Taught HTML, CSS, JavaScript, Python basics and algorithms to 100+ students.</li><li>Helped faculty adopt digital tools and set up tech exhibitions.</li></ul></div>
+<div class="row"><h3>Associate, CMCS</h3><div class="meta">2 months</div>
+<ul><li>Managed institutional databases with no record loss.</li><li>Automated report collation with Python scripts and spreadsheets.</li></ul></div>
+</section>
+
+<section id="skills" class="skills">
+<h2>Skills</h2>
+<dl>
+<dt>Python and backend</dt><dd><div class="chips"><span>Python (Core, OOP)</span><span>Multithreading</span><span>File I/O</span><span>Streamlit</span><span>Tkinter</span><span>PyWhatKit</span><span>Django (MVT, ORM)</span></div></dd>
+<dt>AI and data</dt><dd><div class="chips"><span>Hugging Face</span><span>NLP</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>Data preprocessing</span></div></dd>
+<dt>Databases and tools</dt><dd><div class="chips"><span>MySQL</span><span>Schema design</span><span>Git &amp; GitHub</span><span>Linux CLI</span><span>VS Code</span></div></dd>
+<dt>Frontend</dt><dd><div class="chips"><span>HTML5</span><span>CSS3 (Flexbox, Grid)</span><span>JavaScript ES6+</span><span>Jasmine</span></div></dd>
+</dl>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="row"><h3>Master of Computer Applications (MCA), 2022–2024</h3><div class="meta">GH Raisoni, Amravati University</div></div>
+<div class="row"><h3>Bachelor of Computer Applications (BCA), 2019–2022</h3><div class="meta">College of Management Science &amp; Computer</div></div>
+<div class="row"><h3>Certifications</h3><ul><li>Hugging Face AI/ML: NLP, transformer fine-tuning, pipelines.</li><li>Cloud Computing and CCNA Networking fundamentals.</li></ul></div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Looking for a Python or data developer? Send me a message.</p>
+<div class="btns">
+<a class="btn main" href="mailto:ashutoshmurai0@gmail.com">ashutoshmurai0@gmail.com</a>
+<a class="btn" href="tel:+917796080774">+91 77960 80774</a>
+<a class="btn" href="https://linkedin.com/in/aashutosh-murai-955664264" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/ashutoshmurai0-max" target="_blank" rel="noopener">GitHub</a>
+</div>
+</section>
+<footer>© 2026 Aashutosh Murai</footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,b=document.getElementById('theme');
+b.addEventListener('click',function(){
+var dark=r.getAttribute('data-theme')==='dark'||(r.getAttribute('data-theme')!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+r.setAttribute('data-theme',dark?'light':'dark');
+});
+})();
+</script>
+</body>
+</html>
